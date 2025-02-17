@@ -18,8 +18,12 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <img src="/lovable-uploads/b2725958-5996-4cdc-875d-b27c102fa4a5.png" alt="020 Elektrikerna" className="h-8" />
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/lovable-uploads/b2725958-5996-4cdc-875d-b27c102fa4a5.png" 
+              alt="020 Elektrikerna" 
+              className="h-8 w-auto object-contain max-w-[200px]"
+            />
           </Link>
 
           {/* Desktop Navigation */}

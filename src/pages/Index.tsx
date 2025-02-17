@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import { motion } from "framer-motion";
+import { Zap, Lightbulb, Search } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
@@ -30,7 +31,9 @@ const Index = () => {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
               >
-                <div className="text-elektrikerna-green mb-4">{service.icon}</div>
+                <div className="text-elektrikerna-green mb-4 flex justify-center">
+                  {service.icon}
+                </div>
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                 <p className="text-gray-600">{service.description}</p>
               </motion.div>
@@ -46,17 +49,17 @@ const services = [
   {
     title: "Elinstallationer",
     description: "Professionella elinstallationer för hem och företag med fokus på säkerhet.",
-    icon: "⚡️",
+    icon: <Zap size={32} />,
   },
   {
     title: "Belysning",
     description: "Moderna belysningslösningar som skapar rätt atmosfär och energieffektivitet.",
-    icon: "💡",
+    icon: <Lightbulb size={32} />,
   },
   {
     title: "Felsökning",
     description: "Snabb och effektiv felsökning av elektriska problem.",
-    icon: "🔍",
+    icon: <Search size={32} />,
   },
 ];
 

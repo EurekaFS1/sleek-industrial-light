@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import { Building, Zap, BarChart, Shield } from "lucide-react";
@@ -59,9 +58,9 @@ const Foretag = () => {
               </div>
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/81243bd1-53f9-4706-b759-81bb3e1ae764.png"
+                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b"
                   alt="Företagslösningar"
-                  className="rounded-lg shadow-lg w-full"
+                  className="rounded-lg shadow-lg w-full object-cover h-[400px]"
                 />
               </div>
             </div>

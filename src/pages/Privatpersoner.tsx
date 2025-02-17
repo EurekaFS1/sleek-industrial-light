@@ -29,7 +29,7 @@ const Privatpersoner = () => {
               className="bg-white rounded-xl shadow-sm p-8"
             >
               <img 
-                src="/lovable-uploads/81243bd1-53f9-4706-b759-81bb3e1ae764.png"
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
                 alt="Elektriker arbete"
                 className="w-full h-48 object-cover rounded-lg mb-6"
               />
@@ -46,7 +46,7 @@ const Privatpersoner = () => {
               className="bg-white rounded-xl shadow-sm p-8"
             >
               <img 
-                src="/lovable-uploads/d8a67d73-a484-45c5-a25b-a39aafb2f457.png"
+                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
                 alt="Elinstallation"
                 className="w-full h-48 object-cover rounded-lg mb-6"
               />

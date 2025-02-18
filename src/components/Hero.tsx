@@ -5,11 +5,15 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-gradient-to-b from-white to-gray-50">
       <div className="absolute inset-0">
-        <img
-          src="/lovable-uploads/17c85ca2-9400-43f0-a139-f61703aa8471.png"
-          alt="Elektrisk installation"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover opacity-20"
-        />
+        >
+          <source src="/lovable-uploads/b9de3725-a8fb-4f26-9f4b-1b527790907e.png" type="video/mp4" />
+        </video>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">

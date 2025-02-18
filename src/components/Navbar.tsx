@@ -1,13 +1,12 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Home } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Hem", path: "/", icon: <Home size={18} /> },
     { name: "Tjänster", path: "/tjanster" },
     { name: "Företag", path: "/foretag" },
     { name: "Privatpersoner", path: "/privatpersoner" },
@@ -21,10 +20,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex-shrink-0">
             <img 
-              src="/lovable-uploads/b2725958-5996-4cdc-875d-b27c102fa4a5.png" 
+              src="/lovable-uploads/17c85ca2-9400-43f0-a139-f61703aa8471.png" 
               alt="020 Elektrikerna" 
-              className="h-8 w-auto object-contain"
-              style={{ maxWidth: '140px' }}
+              className="h-8 w-auto"
             />
           </Link>
 
@@ -34,9 +32,8 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className="flex items-center gap-1 text-gray-700 hover:text-elektrikerna-green transition-colors duration-200 text-sm font-medium"
+                className="text-gray-700 hover:text-elektrikerna-green transition-colors duration-200 text-sm font-medium"
               >
-                {link.icon}
                 {link.name}
               </Link>
             ))}
@@ -62,10 +59,9 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:text-elektrikerna-green hover:bg-gray-50 transition-colors duration-200 text-base font-medium"
+                className="block px-3 py-2 text-gray-700 hover:text-elektrikerna-green hover:bg-gray-50 transition-colors duration-200 text-base font-medium"
                 onClick={() => setIsOpen(false)}
               >
-                {link.icon}
                 {link.name}
               </Link>
             ))}

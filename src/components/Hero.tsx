@@ -6,9 +6,9 @@ const Hero = () => {
     <div className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-gradient-to-b from-white to-gray-50">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b"
-          alt="Elektriker arbete"
-          className="w-full h-full object-cover opacity-10"
+          src="/lovable-uploads/17c85ca2-9400-43f0-a139-f61703aa8471.png"
+          alt="Elektrisk installation"
+          className="w-full h-full object-cover opacity-20"
         />
       </div>
       

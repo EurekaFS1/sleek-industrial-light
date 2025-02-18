@@ -1,7 +1,6 @@
 
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
-import { Lightbulb, Zap, Sun, Battery } from "lucide-react";
 
 const KraftBelysning = () => {
   return (
@@ -14,140 +13,60 @@ const KraftBelysning = () => {
         className="pt-24 pb-16"
       >
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Kraft & Belysning</h1>
-            <p className="text-lg text-gray-600">
-              Effektiva och hållbara lösningar för kraft och belysning som möter moderna krav på energieffektivitet och komfort.
-            </p>
-          </div>
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">Kraft & Belysning</h1>
+            
+            <div className="space-y-12">
+              <div>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Industriell Kraftförsörjning</h2>
+                <img 
+                  src="/lovable-uploads/087c8f4b-ebbf-406a-ac4a-7d113e00652a.png"
+                  alt="Kraftanläggning"
+                  className="w-full rounded-lg mb-6 h-[300px] object-cover"
+                />
+                <p className="text-gray-600 mb-4">
+                  Vi erbjuder omfattande lösningar för industriell kraftförsörjning, inklusive installation och underhåll av högspänningsanläggningar, transformatorstationer och ställverk. Våra erfarna tekniker säkerställer att din kraftförsörjning är pålitlig, effektiv och framtidssäkrad.
+                </p>
+                <p className="text-gray-600">
+                  Med modern teknik och expertis inom energioptimering hjälper vi dig att minimera energiförluster och maximera driftsäkerheten i din anläggning. Vi utför regelbundna kontroller och underhåll för att säkerställa optimal prestanda.
+                </p>
+              </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {solutions.map((solution, index) => (
-              <motion.div
-                key={solution.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-sm p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="text-elektrikerna-green p-3 bg-elektrikerna-green/5 rounded-lg">
-                    {solution.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">{solution.title}</h3>
-                    <p className="text-gray-600 mb-4">{solution.description}</p>
-                    <ul className="space-y-2">
-                      {solution.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-elektrikerna-green" />
-                          <span className="text-gray-700">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+              <div>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Professionell Belysningsdesign</h2>
+                <img 
+                  src="/lovable-uploads/570be9d2-ef74-41f1-bb53-96ac47a580f7.png"
+                  alt="Belysningsdesign"
+                  className="w-full rounded-lg mb-6 h-[300px] object-cover"
+                />
+                <p className="text-gray-600 mb-4">
+                  Vår expertis inom belysningsdesign omfattar allt från arkitektonisk belysning till funktionell arbetsplatsbelysning. Vi skapar skräddarsydda belysningslösningar som förbättrar både estetik och funktionalitet i din miljö, samtidigt som vi optimerar energiförbrukningen.
+                </p>
+                <p className="text-gray-600">
+                  Med avancerade styrningssystem och modern LED-teknik kan vi skapa dynamiska belysningslösningar som anpassar sig efter dagens rytm och olika aktiviteter. Vi hjälper dig att välja rätt produkter och system för dina specifika behov.
+                </p>
+              </div>
 
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-12 mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">Våra experttjänster</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {services.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white p-6 rounded-lg shadow-sm"
-                >
-                  <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-                  <p className="text-gray-600 text-sm">{service.description}</p>
-                </motion.div>
-              ))}
+              <div>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Smart Energihantering</h2>
+                <img 
+                  src="/lovable-uploads/b9de3725-a8fb-4f26-9f4b-1b527790907e.png"
+                  alt="Smart energihantering"
+                  className="w-full rounded-lg mb-6 h-[300px] object-cover"
+                />
+                <p className="text-gray-600 mb-4">
+                  Moderna fastigheter kräver smarta lösningar för energihantering. Vi implementerar system för övervakning och styrning av energiförbrukning, vilket ger dig full kontroll över din anläggnings energianvändning och möjlighet till betydande kostnadsbesparingar.
+                </p>
+                <p className="text-gray-600">
+                  Våra lösningar inkluderar installation av energimätare, analyssystem och automatiserad styrning som optimerar din energianvändning. Vi erbjuder även rådgivning kring energieffektivisering och hjälper dig att identifiera förbättringsmöjligheter.
+                </p>
+              </div>
             </div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-center"
-          >
-            <a
-              href="/kontakt"
-              className="inline-block bg-elektrikerna-green text-white px-8 py-3 rounded-lg font-medium hover:bg-elektrikerna-green/90 transition-colors duration-200"
-            >
-              Få en kostnadsfri konsultation
-            </a>
-          </motion.div>
         </div>
       </motion.div>
     </div>
   );
 };
-
-const solutions = [
-  {
-    title: "Kraftinstallationer",
-    description: "Professionella kraftinstallationer för alla typer av fastigheter och anläggningar.",
-    icon: <Zap size={24} />,
-    features: [
-      "Ställverk och transformatorer",
-      "Reservkraftsystem",
-      "Kraftdistribution",
-      "Energimätning",
-    ],
-  },
-  {
-    title: "Belysningssystem",
-    description: "Moderna och energieffektiva belysningslösningar för optimal ljussättning.",
-    icon: <Lightbulb size={24} />,
-    features: [
-      "LED-belysning",
-      "Styrningssystem",
-      "Arkitektonisk belysning",
-      "Nödbelysning",
-    ],
-  },
-  {
-    title: "Solenergi",
-    description: "Kompletta solcellslösningar för en hållbar energiförsörjning.",
-    icon: <Sun size={24} />,
-    features: [
-      "Solcellspaneler",
-      "Batterilager",
-      "Smart styrning",
-      "Övervakning",
-    ],
-  },
-  {
-    title: "Energilagring",
-    description: "Moderna system för energilagring och optimering av energianvändning.",
-    icon: <Battery size={24} />,
-    features: [
-      "Batterisystem",
-      "Laddningsstationer",
-      "Energiövervakning",
-      "Smart styrning",
-    ],
-  },
-];
-
-const services = [
-  {
-    title: "Projektering",
-    description: "Vi hjälper dig planera och designa den optimala kraft- och belysningslösningen för dina behov.",
-  },
-  {
-    title: "Installation",
-    description: "Professionell installation av alla typer av kraft- och belysningssystem.",
-  },
-  {
-    title: "Service & Underhåll",
-    description: "Regelbunden service och underhåll för att säkerställa optimal funktion och livslängd.",
-  },
-];
 
 export default KraftBelysning;

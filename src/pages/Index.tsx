@@ -26,16 +26,28 @@ const Index = () => {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
+                className="bg-white rounded-xl shadow-sm p-8"
               >
-                <div className="text-elektrikerna-green mb-4 flex justify-center">
-                  {service.icon}
+                <div className="flex items-start gap-4">
+                  <div className="text-elektrikerna-green p-3 bg-elektrikerna-green/5 rounded-lg">
+                    {service.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                    <p className="text-gray-600 mb-4">{service.description}</p>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 rounded-full bg-elektrikerna-green" />
+                          <span className="text-gray-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
               </motion.div>
             ))}
           </div>
@@ -48,18 +60,36 @@ const Index = () => {
 const services = [
   {
     title: "Elinstallationer",
-    description: "Professionella elinstallationer för hem och företag med fokus på säkerhet.",
-    icon: <Zap size={32} />,
+    description: "Professionella elinstallationer för hem och företag med fokus på säkerhet och kvalitet.",
+    icon: <Zap size={24} />,
+    features: [
+      "Kompletta elinstallationer för nybyggnation",
+      "Renovering av befintliga elsystem",
+      "Säkerhetscertifierade installationer",
+      "Energioptimering och smart styrning"
+    ]
   },
   {
     title: "Belysning",
-    description: "Moderna belysningslösningar som skapar rätt atmosfär och energieffektivitet.",
-    icon: <Lightbulb size={32} />,
+    description: "Moderna belysningslösningar som skapar rätt atmosfär och optimerar energiförbrukningen.",
+    icon: <Lightbulb size={24} />,
+    features: [
+      "LED-belysning för alla miljöer",
+      "Intelligent ljusstyrning",
+      "Arkitektonisk belysningsdesign",
+      "Energieffektiva lösningar"
+    ]
   },
   {
     title: "Felsökning",
-    description: "Snabb och effektiv felsökning av elektriska problem.",
-    icon: <Search size={32} />,
+    description: "Omfattande felsökning och åtgärder för alla typer av elektriska problem.",
+    icon: <Search size={24} />,
+    features: [
+      "Avancerad diagnostik",
+      "Termografering",
+      "Dokumenterad felsökning",
+      "Förebyggande underhåll"
+    ]
   },
 ];
 

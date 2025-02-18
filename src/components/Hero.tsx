@@ -4,7 +4,13 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-gradient-to-b from-white to-gray-50">
-      <div className="absolute inset-0 bg-[url('/lovable-uploads/81243bd1-53f9-4706-b759-81bb3e1ae764.png')] bg-cover bg-center opacity-5" />
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b"
+          alt="Elektriker arbete"
+          className="w-full h-full object-cover opacity-10"
+        />
+      </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
